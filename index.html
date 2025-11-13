@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Annikas sida!</title>
+  </head>
+
+  <body>
+    <header class="sticky top-0 z-50 bg-white border-b">
+      <nav class="bg-white border-b sticky top-0 z-50">
+        <div
+          class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between"
+        >
+          <div class="text-xl">
+            <a href="#"> AP Ekonomi & Redovisning AB</a>
+          </div>
+
+          <!-- Desktop-meny -->
+          <div id="desktop-menu" class="hidden md:flex gap-6">
+            <a href="" class="hover:text-black hover:underline">Hem</a>
+            <a href="#ourServices" class="hover:text-black hover:underline"
+              >Våra Tjänster</a
+            >
+            <a href="#aboutUs" class="hover:text-black hover:underline"
+              >Om oss</a
+            >
+            <a href="#references" class="hover:text-black hover:underline"
+              >Referenser</a
+            >
+            <a href="#contact" class="hover:text-black hover:underline"
+              >Kontakt</a
+            >
+          </div>
+
+          <button
+            id="menu-toggle"
+            class="md:hidden text-2xl"
+            aria-label="Öppna meny"
+            type="button"
+          >
+            ☰
+          </button>
+        </div>
+
+        <!-- Mobilmeny (gömd från början) -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden border-t px-6 pb-4 space-y-2 flex flex-col items-end"
+        >
+          <a href="" class="block hover:text-blue-600">Hem</a>
+          <a href="#ourServices" class="block hover:text-blue-600"
+            >Våra Tjänster</a
+          >
+          <a href="#aboutUs" class="block hover:text-blue-600">Om oss</a>
+          <a href="#references" class="block hover:text-blue-600">Referenser</a>
+          <a href="#contact" class="block hover:text-blue-600">Kontakt</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="ourServices" class="w-full py-12 scroll-mt-[100px]">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Våra Tjänster</h2>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Bokföringshjälp på era villkor, allt från att sköta hela ledet
+                eller bara där ni känner att ni behöver hjälp.
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Löner, inklusive arbetsgivardeklarationer och
+                semesterberäkningar.
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Hjälpa er igång med er egen bokföring och vara er support när ni
+                är osäkra
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Avstämningar inför momsdeklaration och inlämning
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">Projektredovisning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Årsredovisning med inkomstdeklaration.
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span class="text-gray-700">
+                Rådgivning kring ekonomiprogram.
+              </span>
+            </li>
+          </ul>
+          <p class="mt-8 text-gray-700 text-lg">
+            Behöver du hjälp med något annat inom redovisning eller ekonomi?
+            Kontakta oss så löser vi det mesta!
+          </p>
+        </div>
+      </section>
+
+      <section id="aboutUs" class="w-full py-12 scroll-mt-[60px]">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 mb-8">Om oss</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Vilka vi är
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Vi är en nystartad redovisningsbyrå sedan april 2025. Vi
+                erbjuder tjänster inom redovisning, bokslutsarbete samt
+                digitalisering av er ekonomi.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Vi jobbar efter Rekos riktlinjer (Svensk standard för
+                redovisnings- och lönetjänster) och är anslutna till SRF
+                konsulter.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Jag som driver byrån heter Annika och har jobbat med ekonomi och
+                redovisning i över 40 år. Efter att ha fasta anställningar ville
+                jag driva eget och hjälpa företag att bli mer digitala i sitt
+                ekonomiarbete och kunna erbjuda skräddarsydda lösningar för
+                varje kund!
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Bakgrund
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Det hänt mycket på de 40 år som jag varit aktiv inom
+                ekonomiområdet! Från att man skrev alla fakturor och lönebesked
+                på skrivmaskin och räknade allt för hand till dagens
+                automatiserade system.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Jag började min karriär på 80-talet då allt gjordes manuellt.
+                Jag fick lära mig från grunden att fakturera, göra löner och
+                genomföra kontoavstämningar.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Sedanmera fick jag djupdyka inom leverantörsfakturor och
+                arbetarlöner då jag arbetade på Boliden (senare Kemira Kemi). På
+                Boliden började arbetet med att lägga in löner i databaser och
+                att hantera dåtidens servrar och datorer.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Därefter arbetade jag som redovisningskonsult på ett
+                bemanningsföretag. Under flera år hade jag uppdrag hos många
+                olika kunder och fick göra allt inom redovisning och löner och
+                därmed inhämta kunskaper i de flesta ekonomiprogram och system
+                som finns.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Efter detta hade jag mångåriga fasta anställningar från allt som
+                ekonomiassistent till ekonomichef. Jag fick ett intresse för att
+                utveckla ekonomiarbetet på företagen jag arbetade på med hjälp
+                av datorer, program och system. Sedan gick jag vidare till att
+                arbeta på revisionsbyrå där jag fortsatte att hjälpa kunder att
+                bli mer effektiva samtidigt som jag skötte deras redovisning och
+                bokslut med skattedeklarationer.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Med hjälp av datorer och program ska vi kunna lägga tid och
+                kraft på det som behövs istället för att lägga timmar på att
+                handskriva och räkna på maskin! Därför valde jag att starta eget
+                där jag kan hjälpa företag med allt från det simplaste inom
+                bokföring till att vara er support mot en enklare framtid med
+                hjälp av dagens teknik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="w-full py-12 scroll-mt-[50px]">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Referenser
+          </h2>
+          <ul class="list-none space-y-2 text-gray-700 text-center">
+            <li class="flex justify-center">Rosenblad Bygg AB (Robin)</li>
+            <li class="flex justify-center">JH Tjänst (Jon)</li>
+            <li class="flex justify-center">
+              Van der Graaf Scandinavia AB (Dan)
+            </li>
+            <li class="flex justify-center">Lindenergi AB (Björn)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      id="contact"
+      class="bg-blue-100 px-6 py-4 text-center text-gray-700 border-t border-black-200"
+    >
+      <h3 class="text-lg font-semibold">Kontakt</h3>
+      <p>AB Ekonomi och Redovisning AB</p>
+      <p>Postadress: Fjärestadsvägen 309, 253 42 Vallåkra.</p>
+      <p>Besöksadress: Florettgatan 14 i Helsingborg.</p>
+      <p>Organisationsnummer: 559518-7211.</p>
+      <p>Bankgiro: 823-3439</p>
+      <p>Telefon: 0760-34 43 71</p>
+      <p>
+        Mailadress:
+        <a
+          href="mailto:annika.persson@ekonomiochredovisning.se"
+          class="text-blue-600 hover:underline"
+          >annika.persson@ekonomiochredovisning.se</a
+        >
+      </p>
+    </footer>
+    <script>
+      const btn = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
