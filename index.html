@@ -9,18 +9,23 @@
   </head>
 
   <body>
-    <header class="sticky top-0 z-50 bg-white border-b">
+    <header id="top" class="sticky top-0 z-50 bg-white border-b">
       <nav class="bg-white border-b sticky top-0 z-50">
         <div
           class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between"
         >
           <div class="text-xl">
-            <a href="#"> AP Ekonomi & Redovisning AB</a>
+            <a href="#" id> AP Ekonomi & Redovisning AB</a>
           </div>
 
           <!-- Desktop-meny -->
           <div id="desktop-menu" class="hidden md:flex gap-6">
-            <a href="" class="hover:text-black hover:underline">Hem</a>
+            <a
+              href="#"
+              id="home-link"
+              class="block hover:text-black hover:underline"
+              >Hem</a
+            >
             <a href="#ourServices" class="hover:text-black hover:underline"
               >Våra Tjänster</a
             >
@@ -50,7 +55,7 @@
           id="mobile-menu"
           class="md:hidden hidden border-t px-6 pb-4 space-y-2 flex flex-col items-end"
         >
-          <a href="" class="block hover:text-blue-600">Hem</a>
+          <a href="#" id="home-link" class="block hover:text-blue-600">Hem</a>
           <a href="#ourServices" class="block hover:text-blue-600"
             >Våra Tjänster</a
           >
@@ -61,49 +66,149 @@
       </nav>
     </header>
     <main>
+      <div
+        class="relative py-6 flex justify-center my-4 -mt-[73px] pt-[97px] border border-black/20"
+      >
+        <img
+          src="/pictures/IMG_1745.jpeg"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-50"
+        />
+        <img
+          src="/pictures/20160617_155126.jpg"
+          alt="Bild på ägaren"
+          class="relative z-10 w-32 h-32 md:w-48 md:h-48 rounded-full object-cover shadow border border-black/40"
+        />
+      </div>
       <section id="ourServices" class="w-full py-12 scroll-mt-[100px]">
         <div class="max-w-4xl mx-auto px-6">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">Våra Tjänster</h2>
+          <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+            Våra Tjänster
+          </h2>
           <ul class="space-y-4">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Bokföringshjälp på era villkor, allt från att sköta hela ledet
                 eller bara där ni känner att ni behöver hjälp.
               </span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Löner, inklusive arbetsgivardeklarationer och
                 semesterberäkningar.
               </span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Hjälpa er igång med er egen bokföring och vara er support när ni
                 är osäkra
               </span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Avstämningar inför momsdeklaration och inlämning
               </span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                ></path>
+              </svg>
               <span class="text-gray-700">Projektredovisning</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Årsredovisning med inkomstdeklaration.
               </span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 font-bold">•</span>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
               <span class="text-gray-700">
                 Rådgivning kring ekonomiprogram.
               </span>
@@ -194,18 +299,21 @@
         </div>
       </section>
 
-      <section id="references" class="w-full py-12 scroll-mt-[50px]">
-        <div class="max-w-4xl mx-auto px-6">
+      <section
+        id="references"
+        class="w-full py-12 scroll-mt-[50px] flex items-center justify-center text-center"
+      >
+        <div class="max-w-4xl px-6">
           <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
             Referenser
           </h2>
-          <ul class="list-none space-y-2 text-gray-700 text-center">
-            <li class="flex justify-center">Rosenblad Bygg AB (Robin)</li>
-            <li class="flex justify-center">JH Tjänst (Jon)</li>
-            <li class="flex justify-center">
-              Van der Graaf Scandinavia AB (Dan)
-            </li>
-            <li class="flex justify-center">Lindenergi AB (Björn)</li>
+          <ul
+            class="w-fit mx-auto list-none space-y-2 text-gray-700 text-center"
+          >
+            <li>Rosenblad Bygg AB (Robin)</li>
+            <li>JH Tjänst (Jon)</li>
+            <li>Van der Graaf Scandinavia AB (Dan)</li>
+            <li>Lindenergi AB (Björn)</li>
           </ul>
         </div>
       </section>
@@ -213,7 +321,7 @@
 
     <footer
       id="contact"
-      class="bg-blue-100 px-6 py-4 text-center text-gray-700 border-t border-black-200"
+      class="bg-blue-200 px-6 py-4 text-center text-gray-700 border-t border-black-200"
     >
       <h3 class="text-lg font-semibold">Kontakt</h3>
       <p>AB Ekonomi och Redovisning AB</p>
@@ -237,6 +345,16 @@
 
       btn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+      });
+
+      const homeLink = document.getElementById("home-link");
+
+      homeLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     </script>
   </body>
