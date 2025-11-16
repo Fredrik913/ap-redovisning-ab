@@ -1,16 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
-section {
-  min-height: 100vh;
-}
-footer {
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 section:nth-child(odd) {
   background-color: #f5f5f5;
+}
+
+@media (min-width: 1024px) {
+  section {
+    min-height: 100vh;
+  }
 }
