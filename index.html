@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="preload" as="image" href="./pictures/20160617_155126.jpg" />
     <link rel="preload" as="image" href="/pictures/20160617_155126.jpg" />
+    <script src="index.js" defer></script>
+
     <title>AP Ekonomi & Redovisning</title>
   </head>
 
@@ -391,7 +393,7 @@
 
           <div class="grid gap-8 md:grid-cols-2 place-items-center w-full">
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400/40 w-full max-w-sm"
+              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">
                 Rosenblad Bygg AB
@@ -400,14 +402,14 @@
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400/40 w-full max-w-sm"
+              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">JH Tjänst</h3>
               <p class="text-gray-600 mt-1">Kontakt: Jon</p>
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400/40 w-full max-w-sm"
+              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">
                 Van der Graaf Scandinavia AB
@@ -416,7 +418,7 @@
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400/40 w-full max-w-sm"
+              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">Lindenergi AB</h3>
               <p class="text-gray-600 mt-1">Kontakt: Björn</p>
@@ -428,7 +430,7 @@
 
     <footer
       id="contact"
-      class="bg-blue-50 px-6 py-12 text-gray-700 border-t border-black/10"
+      class="bg-blue-400/50 px-6 py-12 text-gray-700 border-t border-black/10"
     >
       <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-2xl font-semibold text-gray-800 mb-6">Kontakt</h3>
@@ -479,54 +481,5 @@
         © 2025 AP Ekonomi & Redovisning AB. Alla rättigheter reserverade.
       </div>
     </footer>
-
-    <script>
-      // ELEMENT
-      const btn = document.getElementById("menu-toggle");
-      const menu = document.getElementById("mobile-menu");
-      const mobileLinks = document.querySelectorAll(".mobile-link");
-      const homeDesktop = document.getElementById("home-scroll");
-      const homeMobile = document.getElementById("home-scroll-mobile");
-
-      // === ÖPPNA/STÄNG HAMBURGARMENY ===
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        menu.classList.toggle("hidden");
-      });
-
-      // === STÄNG MENY VID KLICK PÅ EN MOBIL-LÄNK ===
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
-        });
-      });
-
-      // === STÄNG MENYN VID KLICK UTANFÖR ===
-      document.addEventListener("click", (e) => {
-        const clickInsideMenu = menu.contains(e.target);
-        const clickOnButton = btn.contains(e.target);
-
-        if (!clickInsideMenu && !clickOnButton) {
-          menu.classList.add("hidden");
-        }
-      });
-
-      // === SMOOTH SCROLL HEM (DESKTOP) ===
-      if (homeDesktop) {
-        homeDesktop.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-
-      // === SMOOTH SCROLL HEM (MOBIL) OCH STÄNG MENY ===
-      if (homeMobile) {
-        homeMobile.addEventListener("click", (e) => {
-          e.preventDefault();
-          menu.classList.add("hidden");
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-    </script>
   </body>
 </html>
