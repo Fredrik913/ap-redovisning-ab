@@ -92,12 +92,15 @@
         <img
           src="pictures/IMG_1745.jpeg"
           alt="Background"
-          class="absolute inset-0 w-full h-full object-cover opacity-50"
+          class="absolute inset-0 w-full h-full object-cover"
         />
+
+        <!-- MÖRK OVERLAY -->
+        <div class="absolute inset-0 bg-black/50"></div>
 
         <div class="relative z-10 text-center px-6">
           <h1
-            class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight"
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-100 leading-tight"
           >
             Erfarenhet som skapar trygghet i en digital ekonomi
           </h1>
@@ -106,22 +109,20 @@
 
       <section
         id="ourServices"
-        class="w-full py-12 scroll-mt-[100px] border-b border-gray-100"
+        class="w-full py-14 scroll-mt-[100px] border-b border-gray-100"
       >
         <div
           class="max-w-4xl mx-auto px-6 flex items-center flex-col text-center"
         >
-          <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
-            Våra Tjänster
-          </h2>
+          <h2 class="text-4xl font-bold text-gray-800 mb-10">Våra Tjänster</h2>
 
           <ul
-            class="space-y-4 border-l-4 border-blue-500/60 pl-4 text-left w-full"
+            class="space-y-5 md:space-y-6 border-l-4 border-blue-500 pl-5 text-left w-full"
           >
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -131,18 +132,20 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Bokföringshjälp på era villkor, allt från att sköta hela ledet
                 eller bara där ni känner att ni behöver hjälp.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -152,18 +155,20 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Löner, inklusive arbetsgivardeklarationer och
                 semesterberäkningar.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -173,17 +178,19 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Hjälpa er igång med er egen bokföring och vara er support.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -193,17 +200,19 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Avstämningar inför momsdeklaration och inlämning.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -213,17 +222,19 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Projektredovisning.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -233,17 +244,19 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Årsredovisning med inkomstdeklaration.
               </span>
             </li>
 
             <!-- ITEM -->
-            <li class="flex items-center gap-3">
+            <li class="flex items-center gap-4">
               <svg
-                class="w-6 h-6 text-blue-500/60 shrink-0 mt-0.5"
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -253,18 +266,38 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
+                />
               </svg>
-              <span class="text-gray-700 flex-1 leading-snug">
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
                 Rådgivning kring ekonomiprogram.
               </span>
             </li>
-          </ul>
 
-          <p class="mt-8 text-gray-700 text-lg leading-snug">
-            Behöver du hjälp med något annat inom redovisning eller ekonomi?
-            Kontakta oss så löser vi det mesta!
-          </p>
+            <!-- ITEM -->
+            <li class="flex items-center gap-4">
+              <svg
+                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <span
+                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              >
+                Övriga ekonomitjänster – kontakta oss gärna för att diskutera
+                era behov.
+              </span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -277,7 +310,7 @@
             class="bg-white rounded-2xl shadow-sm border border-slate-200/70 p-8 md:p-10"
           >
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
-              Om oss
+              Vilka är vi
             </h2>
 
             <div class="grid md:grid-cols-2 gap-12 items-start">
@@ -294,9 +327,7 @@
               <div class="space-y-6">
                 <!-- Sektion 1 -->
                 <div>
-                  <h3 class="text-2xl font-semibold text-gray-800">
-                    Vilka vi är
-                  </h3>
+                  <h3 class="text-2xl font-semibold text-gray-800">Om oss</h3>
                   <p class="text-gray-700 mt-2 leading-relaxed">
                     Vi är en nystartad redovisningsbyrå sedan april 2025. Vi
                     erbjuder tjänster inom redovisning, bokslutsarbete samt
@@ -308,7 +339,7 @@
                     konsulter.
                   </p>
 
-                  <div class="mt-6 border-l-4 border-blue-400/40 pl-4">
+                  <div class="mt-6 border-l-4 border-blue-500 pl-4">
                     <p class="text-sm uppercase tracking-wide text-gray-500">
                       Erfarenhet
                     </p>
@@ -397,36 +428,54 @@
 
     <footer
       id="contact"
-      class="bg-blue-50 px-6 py-10 text-gray-700 border-t border-black/10"
+      class="bg-blue-50 px-6 py-12 text-gray-700 border-t border-black/10"
     >
-      <div class="max-w-4xl mx-auto text-center space-y-3">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Kontakt</h3>
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Kontakt</h3>
 
-        <p class="font-medium text-gray-800">AP Ekonomi & Redovisning AB</p>
+        <ul class="mx-auto inline-block text-left space-y-2">
+          <li class="font-medium text-gray-800">AP Ekonomi & Redovisning AB</li>
 
-        <p>Postadress: Fjärestadsvägen 309, 253 42 Vallåkra</p>
-        <p>Besöksadress: Florettgatan 14, Helsingborg</p>
+          <li>
+            <span class="font-semibold">Postadress:</span>
+            Fjärestadsvägen 309, 253 42 Vallåkra
+          </li>
 
-        <p>Organisationsnummer: 559518-7211</p>
-        <p>Bankgiro: 823-3439</p>
+          <li>
+            <span class="font-semibold">Besöksadress:</span>
+            Florettgatan 14, Helsingborg
+          </li>
 
-        <p class="mt-4">
-          Telefon:
-          <span class="font-medium text-gray-800">0760-34 43 71</span>
-        </p>
+          <li>
+            <span class="font-semibold">Organisationsnummer:</span>
+            559518-7211
+          </li>
 
-        <p>
-          Mailadress:
-          <a
-            href="mailto:annika.persson@ekonomiochredovisning.se"
-            class="text-black hover:underline"
-          >
-            annika.persson@ekonomiochredovisning.se
-          </a>
-        </p>
+          <li>
+            <span class="font-semibold">Bankgiro:</span>
+            823-3439
+          </li>
+
+          <li class="pt-2">
+            <span class="font-semibold">Telefon:</span>
+            <a href="tel:0760344371" class="text-black hover:underline">
+              0760-34 43 71
+            </a>
+          </li>
+
+          <li>
+            <span class="font-semibold">Mailadress:</span>
+            <a
+              href="mailto:annika.persson@ekonomiochredovisning.se"
+              class="text-black hover:underline"
+            >
+              annika.persson@ekonomiochredovisning.se
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="text-center text-gray-500 text-sm mt-8">
+      <div class="text-center text-gray-500 text-sm mt-10">
         © 2025 AP Ekonomi & Redovisning AB. Alla rättigheter reserverade.
       </div>
     </footer>
