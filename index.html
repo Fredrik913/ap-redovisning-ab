@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="image"
+      href="/pictures/hero-mobil.jpg"
+      media="(max-width: 640px)"
+      type="image/jpeg"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/pictures/hero.jpg"
+      media="(min-width: 641px)"
+      type="image/jpeg"
+    />
+
+    <link rel="preload" as="image" href="./pictures/profilbild.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
-    <link rel="preload" as="image" href="./pictures/20160617_155126.jpg" />
-    <link rel="preload" as="image" href="/pictures/IMG_1745.jpeg" />
     <script src="index.js" defer></script>
 
     <title>AP Ekonomi & Redovisning</title>
@@ -19,7 +34,7 @@
           class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between"
         >
           <div class="text-xl text-gray-800">
-            <a href="#" id="home-scroll">AB Ekonomi & Redovisning AB</a>
+            <a href="#" id="home-scroll">AP Ekonomi & Redovisning AB</a>
           </div>
 
           <!-- Desktop-meny -->
@@ -89,13 +104,31 @@
 
     <main>
       <div
-        class="relative py-6 flex justify-center items-center my-4 -mt-[73px] pt-[97px] border border-black/20 min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px] border-b border-gray-300"
+        <div
+        class="relative flex justify-center items-center -mt-[73px] pt-[97px] pb-8 border-b border-black/20 min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]"
       >
-        <img
-          src="pictures/IMG_1745.jpeg"
-          alt="Background"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
+        <picture class="absolute inset-0 w-full h-full">
+          <!-- Mobilbild (upp till 640px) -->
+          <source
+            srcset="pictures/hero-mobil.jpg"
+            media="(max-width: 640px)"
+            type="image/jpeg"
+          />
+
+          <!-- Desktopbild (från 641px och uppåt) -->
+          <source
+            srcset="pictures/hero.jpeg"
+            media="(min-width: 641px)"
+            type="image/jpeg"
+          />
+
+          <!-- Fallback -->
+          <img
+            src="pictures/hero.jpeg"
+            alt="Background"
+            class="w-full h-full object-cover"
+          />
+        </picture>
 
         <!-- MÖRK OVERLAY -->
         <div class="absolute inset-0 bg-black/50"></div>
@@ -109,273 +142,137 @@
         </div>
       </div>
 
-      <section
-        id="ourServices"
-        class="w-full py-14 scroll-mt-[100px] border-b border-gray-100"
-      >
-        <div
-          class="max-w-4xl mx-auto px-6 flex items-center flex-col text-center"
-        >
-          <h2 class="text-4xl font-bold text-gray-800 mb-10">Våra Tjänster</h2>
+      <section id="ourServices" class="w-full pt-10 pb-12 scroll-mt-[70px]">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+            Våra tjänster
+          </h2>
 
-          <ul
-            class="space-y-5 md:space-y-6 border-l-4 border-blue-500 pl-5 text-left w-full"
-          >
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+          <!-- Intern container för bättre läsbarhet -->
+          <div class="max-w-3xl mx-auto">
+            <!-- Border på UL -->
+            <ul class="space-y-6 border-l-4 border-blue-600 pl-6 text-left">
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Bokföringshjälp på era villkor, allt från att sköta hela ledet
                 eller bara där ni känner att ni behöver hjälp.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Löner, inklusive arbetsgivardeklarationer och
                 semesterberäkningar.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Hjälpa er igång med er egen bokföring och vara er support.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Avstämningar inför momsdeklaration och inlämning.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Projektredovisning.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Årsredovisning med inkomstdeklaration.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Rådgivning kring ekonomiprogram.
-              </span>
-            </li>
+              </li>
 
-            <!-- ITEM -->
-            <li class="flex items-center gap-4">
-              <svg
-                class="w-7 h-7 md:w-8 md:h-8 text-blue-500 shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                />
-              </svg>
-              <span
-                class="text-gray-700 text-base md:text-lg flex-1 leading-snug"
+              <li
+                class="text-gray-700 text-sm md:text-base leading-snug font-semibold"
               >
                 Övriga ekonomitjänster – kontakta oss gärna för att diskutera
                 era behov.
-              </span>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section
-        id="aboutUs"
-        class="w-full py-16 scroll-mt-[60px] bg-slate-50 border-b border-gray-100"
-      >
+      <section id="aboutUs" class="w-full pt-6 pb-12 scroll-mt-[60px]">
         <div class="max-w-5xl mx-auto px-6">
-          <div
-            class="bg-white rounded-2xl shadow-sm border border-slate-200/70 p-8 md:p-10"
-          >
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
-              Vilka är vi
-            </h2>
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
+            Vilka är vi
+          </h2>
 
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-              <!-- Bilden -->
-              <div class="flex justify-center">
-                <img
-                  src="pictures/20160617_155126.jpg"
-                  alt="Ägare Annika Persson"
-                  class="w-64 h-64 object-cover rounded-full shadow-lg border border-blue-400/30"
-                />
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <!-- Bilden -->
+            <div class="flex justify-center">
+              <img
+                src="pictures/profilbild.jpg"
+                alt="Ägare Annika Persson"
+                class="w-64 h-64 object-cover rounded-full shadow-lg border border-blue-400/30"
+              />
+            </div>
+
+            <!-- Textblock -->
+            <div class="space-y-6">
+              <!-- Sektion 1 -->
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">Om oss</h3>
+                <p class="text-gray-700 mt-2 leading-relaxed">
+                  Vi är en nystartad redovisningsbyrå sedan april 2025. Vi
+                  erbjuder tjänster inom redovisning, bokslutsarbete samt
+                  digitalisering av er ekonomi.
+                </p>
+                <p class="text-gray-700 leading-relaxed mt-4">
+                  Vi jobbar efter Rekos riktlinjer (Svensk standard för
+                  redovisnings- och lönetjänster) och är anslutna till SRF
+                  konsulter.
+                </p>
+
+                <div class="mt-6 border-l-4 border-blue-500 pl-4">
+                  <p class="text-sm uppercase tracking-wide text-gray-500">
+                    Erfarenhet
+                  </p>
+                  <p class="mt-1 text-gray-800 font-semibold">
+                    40+ års erfarenhet inom ekonomi och redovisning
+                  </p>
+                  <p class="mt-1 text-gray-600 text-sm">
+                    Från skrivmaskin och manuell bokföring till dagens digitala,
+                    automatiserade system.
+                  </p>
+                </div>
               </div>
 
-              <!-- Textblock -->
-              <div class="space-y-6">
-                <!-- Sektion 1 -->
-                <div>
-                  <h3 class="text-2xl font-semibold text-gray-800">Om oss</h3>
-                  <p class="text-gray-700 mt-2 leading-relaxed">
-                    Vi är en nystartad redovisningsbyrå sedan april 2025. Vi
-                    erbjuder tjänster inom redovisning, bokslutsarbete samt
-                    digitalisering av er ekonomi.
-                  </p>
-                  <p class="text-gray-700 leading-relaxed mt-4">
-                    Vi jobbar efter Rekos riktlinjer (Svensk standard för
-                    redovisnings- och lönetjänster) och är anslutna till SRF
-                    konsulter.
-                  </p>
+              <!-- Sektion 2 -->
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">Bakgrund</h3>
+                <p class="text-gray-700 leading-relaxed mt-2">
+                  Det har hänt mycket på de 40 år som jag varit aktiv inom
+                  ekonomiområdet. Från att skriva fakturor på skrivmaskin till
+                  dagens digitaliserade system.
+                </p>
 
-                  <div class="mt-6 border-l-4 border-blue-500 pl-4">
-                    <p class="text-sm uppercase tracking-wide text-gray-500">
-                      Erfarenhet
-                    </p>
-                    <p class="mt-1 text-gray-800 font-semibold">
-                      40+ års erfarenhet inom ekonomi och redovisning
-                    </p>
-                    <p class="mt-1 text-gray-600 text-sm">
-                      Från skrivmaskin och manuell bokföring till dagens
-                      digitala, automatiserade system.
-                    </p>
-                  </div>
-                </div>
+                <p class="text-gray-700 leading-relaxed mt-4">
+                  Jag började min karriär på 80-talet med manuell bokföring,
+                  gick vidare till ekonomiroller i industrin och har arbetat
+                  både som konsult, ekonomichef och på revisionsbyrå.
+                </p>
 
-                <!-- Sektion 2 -->
-                <div>
-                  <h3 class="text-2xl font-semibold text-gray-800">Bakgrund</h3>
-                  <p class="text-gray-700 leading-relaxed mt-2">
-                    Det har hänt mycket på de 40 år som jag varit aktiv inom
-                    ekonomiområdet. Från att skriva fakturor på skrivmaskin till
-                    dagens digitaliserade system.
-                  </p>
-
-                  <p class="text-gray-700 leading-relaxed mt-4">
-                    Jag började min karriär på 80-talet med manuell bokföring,
-                    gick vidare till ekonomiroller i industrin och har arbetat
-                    både som konsult, ekonomichef och på revisionsbyrå.
-                  </p>
-
-                  <p class="text-gray-700 leading-relaxed mt-4">
-                    Med hjälp av digitala verktyg kan vi skapa en effektiv,
-                    trygg och transparent ekonomiprocess. Det är detta jag
-                    hjälper företag med idag.
-                  </p>
-                </div>
+                <p class="text-gray-700 leading-relaxed mt-4">
+                  Med hjälp av digitala verktyg kan vi skapa en effektiv, trygg
+                  och transparent ekonomiprocess. Det är detta jag hjälper
+                  företag med idag.
+                </p>
               </div>
             </div>
           </div>
@@ -384,16 +281,16 @@
 
       <section
         id="references"
-        class="w-full py-16 scroll-mt-[50px] bg-gray-50 flex items-center"
+        class="flex items-center w-full pt-6 pb-12 scroll-mt-[50px] md:min-h-[500px]"
       >
-        <div
-          class="max-w-4xl mx-auto px-6 flex flex-col items-center text-center"
-        >
-          <h2 class="text-3xl font-bold text-gray-800 mb-10">Referenser</h2>
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+            Referenser
+          </h2>
 
           <div class="grid gap-8 md:grid-cols-2 place-items-center w-full">
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
+              class="p-6 bg-white rounded-xl border-l-4 border-blue-600 shadow-lg shadow-gray-300 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">
                 Rosenblad Bygg AB
@@ -402,14 +299,14 @@
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
+              class="p-6 bg-white rounded-xl border-l-4 border-blue-600 shadow-lg shadow-gray-300 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">JH Tjänst</h3>
               <p class="text-gray-600 mt-1">Kontakt: Jon</p>
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
+              class="p-6 bg-white rounded-xl border-l-4 border-blue-600 shadow-lg shadow-gray-300 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">
                 Van der Graaf Scandinavia AB
@@ -418,7 +315,7 @@
             </div>
 
             <div
-              class="p-6 bg-white shadow-sm rounded-xl border-l-4 border-blue-400 w-full max-w-sm"
+              class="p-6 bg-white rounded-xl border-l-4 border-blue-600 shadow-lg shadow-gray-300 w-full max-w-sm"
             >
               <h3 class="text-lg font-semibold text-gray-800">Lindenergi AB</h3>
               <p class="text-gray-600 mt-1">Kontakt: Björn</p>
