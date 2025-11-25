@@ -6,7 +6,7 @@
     <link
       rel="preload"
       as="image"
-      href="pictures/heroM.jpg"
+      href="pictures/hero-mobile.jpg"
       media="(max-width: 640px)"
       type="image/jpeg"
     />
@@ -14,12 +14,11 @@
     <link
       rel="preload"
       as="image"
-      href="pictures/hero.jpeg"
+      href="pictures/hero-desktop.jpg"
       media="(min-width: 641px)"
       type="image/jpeg"
     />
 
-    <link rel="preload" as="image" href="pictures/profilbild.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
@@ -107,23 +106,18 @@
         class="relative flex justify-center items-center -mt-[73px] pt-[97px] pb-8 border-b border-black/20 min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]"
       >
         <picture class="absolute inset-0 w-full h-full">
-          <!-- Mobilbild (upp till 640px) -->
           <source
-            srcset="pictures/heroM.jpg"
+            srcset="pictures/hero-mobile.jpg"
             media="(max-width: 640px)"
             type="image/jpeg"
           />
-
-          <!-- Desktopbild (från 641px och uppåt) -->
           <source
-            srcset="pictures/hero.jpeg"
+            srcset="pictures/hero-desktop.jpg"
             media="(min-width: 641px)"
             type="image/jpeg"
           />
-
-          <!-- Fallback -->
           <img
-            src="pictures/hero.jpeg"
+            src="pictures/hero-desktop.jpg"
             alt="Background"
             class="w-full h-full object-cover"
           />
@@ -216,7 +210,7 @@
             <!-- Bilden -->
             <div class="flex justify-center">
               <img
-                src="pictures/profilbild.jpg"
+                src="pictures/profile-portrait.jpg"
                 alt="Ägare Annika Persson"
                 class="w-64 h-64 object-cover rounded-full shadow-lg border border-blue-400/30"
               />
