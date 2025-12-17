@@ -2,16 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* section:nth-child(even) {
-  background-color: #f5f5f5;
-} */
-
 section:nth-child(even) {
   background-color: #fafafa;
 }
 
-/* @media (min-width: 1024px) {
-  section {
-    min-height: 100vh;
-  }
-} */
+.highlight {
+  font-weight: bold;
+}
