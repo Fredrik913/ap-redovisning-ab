@@ -6,24 +6,47 @@ function References() {
       id="references"
       className="flex items-center w-full pt-6 pb-12 scroll-mt-[50px] md:min-h-[500px]"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">Referenser</h2>
 
-        {/* 2 cards in row on tablet, 3 on large desktop */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full">
+        <div className="grid gap-4 md:grid-cols-2">
           {references.map((ref) => (
             <div
               key={ref.company}
-              className="p-6 bg-white rounded-xl border-l-4 border-blue-600 shadow-lg shadow-gray-300 w-full"
+              className="p-6 bg-white border border-gray-200 rounded-xl shadow-xs flex gap-4 items-start"
             >
-              <h3 className="text-lg font-semibold text-gray-800">{ref.company}</h3>
-              <p className="text-gray-600 mt-1">Kontakt: {ref.contact}</p>
-              <p className="text-gray-700 mt-1">
-                <span className="font-semibold">Telefon:</span>{" "}
-                <a href={`tel:${ref.phone.tel}`} className="text-black hover:underline">
+              <div
+                aria-hidden="true"
+                className="shrink-0 w-12 h-12 rounded-full bg-stone-800 text-amber-50 font-semibold flex items-center justify-center"
+              >
+                {ref.initials}
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">{ref.company}</h3>
+                <p className="text-gray-600">{ref.contact}</p>
+                <a
+                  href={`tel:${ref.phone.tel}`}
+                  aria-label={`Ring ${ref.contact} på ${ref.phone.label}`}
+                  className="mt-2 inline-flex items-center gap-1.5 font-medium text-gray-900 hover:underline"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 text-amber-500"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    />
+                  </svg>
                   {ref.phone.label}
                 </a>
-              </p>
+              </div>
             </div>
           ))}
         </div>
