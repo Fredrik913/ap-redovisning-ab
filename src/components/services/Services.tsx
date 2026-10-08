@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { services } from "../content/services";
+import { services } from "../../content/services";
 
 function Services() {
   const [openService, setOpenService] = useState<number | null>(null);
@@ -14,7 +14,6 @@ function Services() {
             <details
               key={service.title}
               open={openService === i}
-              // ALLOW ONLY ONE DETAILS OPEN AT A TIME
               onToggle={(e) => {
                 const isOpen = e.currentTarget.open;
                 setOpenService((current) => (isOpen ? i : current === i ? null : current));

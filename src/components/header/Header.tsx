@@ -1,6 +1,6 @@
 import { useRef, useState, type MouseEvent } from "react";
-import { useClickOutside } from "../hooks/useClickOutside";
-import { scrollToTop } from "../utils/scroll";
+import { useClickOutside } from "../../hooks/useClickOutside";
+import { scrollToTop } from "../../utils/scroll";
 
 const menuLinks = [
   { href: "#ourServices", label: "Våra tjänster" },
