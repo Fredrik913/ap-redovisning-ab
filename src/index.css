@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Tailwind v4 har currentColor som standardfärg på border, v3 (CDN) hade gray-200 */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.highlight {
+  font-weight: bold;
+}
