@@ -8,10 +8,7 @@ function Hero() {
         <source srcSet={hero.image.desktop} media="(min-width: 641px)" type="image/jpeg" />
         <img src={hero.image.desktop} alt={hero.image.alt} className="w-full h-full object-cover" />
       </picture>
-
-      {/* MÖRK OVERLAY */}
       <div className="absolute inset-0 bg-black/50"></div>
-
       <div className="relative z-10 text-center px-6">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-100 leading-tight">
           {hero.heading}

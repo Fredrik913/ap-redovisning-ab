@@ -9,14 +9,12 @@ function App() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <Services />
         <About />
         <References />
       </main>
-
       <Footer />
     </>
   );

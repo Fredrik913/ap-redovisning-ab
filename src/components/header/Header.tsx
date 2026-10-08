@@ -1,6 +1,7 @@
 import { useRef, useState, type MouseEvent } from "react";
+import { flushSync } from "react-dom";
 import { useClickOutside } from "../../hooks/useClickOutside";
-import { scrollToTop } from "../../utils/scroll";
+import { scrollToSection, scrollToTop } from "../../utils/scroll";
 
 const menuLinks = [
   { href: "#ourServices", label: "Våra tjänster" },
@@ -16,16 +17,23 @@ function Header() {
 
   useClickOutside([menuRef, buttonRef], () => setMenuOpen(false));
 
+  // Stänger menyn innan scrollningen startar, så att headern inte krymper mitt i scrollen
   const goHome = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    setMenuOpen(false);
+    flushSync(() => setMenuOpen(false));
     scrollToTop();
+  };
+
+  const goToSection = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    flushSync(() => setMenuOpen(false));
+    scrollToSection(href);
   };
 
   return (
     <header id="top" className="sticky top-0 z-50 bg-gray-50 border-b border-gray-200">
       <nav className="bg-gray-50 border-b sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="px-6 md:px-10 py-4 flex items-center justify-between">
           <div className="text-xl text-gray-800">
             <a href="#" onClick={goHome}>
               AP Ekonomi & Redovisning AB
@@ -69,7 +77,7 @@ function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => goToSection(e, link.href)}
               className="block hover:underline text-black"
             >
               {link.label}
