@@ -1,46 +1,5 @@
-import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
-
-const services: { title: string; text: ReactNode }[] = [
-  {
-    title: "Bokföringshjälp",
-    text: "Vi hanterar hela eller delar av bokföringen beroende på ert behov. Struktur, löpande arbete och korrekt rapportering.",
-  },
-  {
-    title: "Löner & arbetsgivardeklarationer",
-    text: "Vi sköter löner, arbetsgivardeklarationer och semesterberäkningar.",
-  },
-  {
-    title: "Stöd & rådgivning",
-    text: "Vi hjälper er att komma igång med egen bokföring och finns tillgängliga för frågor när ni behöver stöd.",
-  },
-  {
-    title: "Momsavstämningar",
-    text: "Vi gör avstämningar inför momsdeklarationen och säkerställer att inlämningen blir korrekt.",
-  },
-  {
-    title: "Projektredovisning",
-    text: "Löpande projektredovisning och uppföljning.",
-  },
-  {
-    title: "Årsredovisning & deklarationer",
-    text: "Vi upprättar årsredovisning, bokslut och inkomstdeklaration enligt gällande krav och regelverk.",
-  },
-  {
-    title: "Ekonomiprogram & rådgivning",
-    text: (
-      <>
-        Vi erbjuder rådgivning och stöd i <span className="highlight">Spiris</span>,{" "}
-        <span className="highlight">Fortnox</span> och{" "}
-        <span className="highlight">Visma</span>. Vi hjälper er att arbeta
-        effektivt i ert valda system.
-      </>
-    ),
-  },
-  {
-    title: "Övriga ekonomitjänster",
-    text: "Behöver ni hjälp inom andra områden i redovisning eller ekonomi? Kontakta oss så tittar vi på det.",
-  },
-];
+import Header from "./components/Header";
+import Services from "./components/Services";
 
 const references = [
   { company: "Rosenblad Bygg AB", contact: "Robin", tel: "0709208874", telLabel: "0709-208874" },
@@ -48,102 +7,29 @@ const references = [
   { company: "Lindenergi AB", contact: "Björn", tel: "0793379692", telLabel: "0793-379692" },
 ];
 
-const menuLinks = [
-  { href: "#ourServices", label: "Våra tjänster" },
-  { href: "#aboutUs", label: "Om oss" },
-  { href: "#references", label: "Referenser" },
-  { href: "#contact", label: "Kontakt" },
-];
-
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openService, setOpenService] = useState<number | null>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  // === STÄNG MENYN VID KLICK UTANFÖR ===
-  useEffect(() => {
-    const handleClick = (e: globalThis.MouseEvent) => {
-      const target = e.target as Node;
-      if (!menuRef.current?.contains(target) && !buttonRef.current?.contains(target)) {
-        setMenuOpen(false);
-      }
-    };
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-  }, []);
-
-  // === SMOOTH SCROLL HEM OCH STÄNG MENY ===
-  const scrollToTop = (e: MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <>
-      <header id="top" className="sticky top-0 z-50 bg-gray-50 border-b border-gray-200">
-        <nav className="bg-gray-50 border-b sticky top-0 z-50">
-          <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="text-xl text-gray-800">
-              <a href="#" onClick={scrollToTop}>
-                AP Ekonomi & Redovisning AB
-              </a>
-            </div>
-
-            {/* Desktop-meny */}
-            <div className="hidden md:flex gap-6">
-              <a href="#" onClick={scrollToTop} className="hover:underline text-black">
-                Hem
-              </a>
-              {menuLinks.map((link) => (
-                <a key={link.href} href={link.href} className="hover:underline text-black">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Hamburgermenyn (mobil) */}
-            <button
-              ref={buttonRef}
-              onClick={() => setMenuOpen((open) => !open)}
-              className="md:hidden text-2xl"
-              aria-label="Öppna meny"
-              aria-expanded={menuOpen}
-              type="button"
-            >
-              ☰
-            </button>
-          </div>
-
-          {/* Mobilmeny */}
-          <div
-            ref={menuRef}
-            className={`md:hidden ${menuOpen ? "" : "hidden"} border-t border-gray-200 px-6 pb-4 pt-2 space-y-2 bg-white/95 text-right backdrop-blur-xs`}
-          >
-            <a href="#" onClick={scrollToTop} className="block hover:underline text-black">
-              Hem
-            </a>
-            {menuLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block hover:underline text-black"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <div className="relative flex justify-center items-center -mt-[73px] pt-[97px] pb-8 border-b border-black/20 h-[80vh]">
           <picture className="absolute inset-0 w-full h-full">
-            <source srcSet="/pictures/hero-mobile.jpg" media="(max-width: 640px)" type="image/jpeg" />
-            <source srcSet="/pictures/hero-desktop.jpg" media="(min-width: 641px)" type="image/jpeg" />
-            <img src="/pictures/hero-desktop.jpg" alt="Background" className="w-full h-full object-cover" />
+            <source
+              srcSet="/pictures/hero-mobile.jpg"
+              media="(max-width: 640px)"
+              type="image/jpeg"
+            />
+            <source
+              srcSet="/pictures/hero-desktop.jpg"
+              media="(min-width: 641px)"
+              type="image/jpeg"
+            />
+            <img
+              src="/pictures/hero-desktop.jpg"
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
           </picture>
 
           {/* MÖRK OVERLAY */}
@@ -156,41 +42,7 @@ function App() {
           </div>
         </div>
 
-        <section id="ourServices" className="w-full pt-16 pb-20 scroll-mt-[70px]">
-          <div className="max-w-5xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">Våra tjänster</h2>
-
-            <div className="max-w-3xl mx-auto space-y-4">
-              {services.map((service, i) => (
-                <details
-                  key={service.title}
-                  open={openService === i}
-                  // ALLOW ONLY ONE DETAILS OPEN AT A TIME
-                  onToggle={(e) => {
-                    const isOpen = e.currentTarget.open;
-                    setOpenService((current) => (isOpen ? i : current === i ? null : current));
-                  }}
-                  className="group border border-gray-200 rounded-xl p-5 shadow-xs transition-all bg-white hover:shadow-md hover:border-gray-600"
-                >
-                  <summary className="cursor-pointer text-lg font-semibold text-gray-800 list-none flex items-center justify-between">
-                    {service.title}
-                    <svg
-                      className="w-5 h-5 text-gray-800 transition-all duration-300 group-open:rotate-180"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-                    </svg>
-                  </summary>
-
-                  <p className="mt-3 text-gray-600 leading-relaxed">{service.text}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Services />
 
         <section id="aboutUs" className="w-full pt-16 pb-20 scroll-mt-[60px]">
           <div className="max-w-5xl mx-auto px-6">
@@ -236,8 +88,8 @@ function App() {
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-800">Bakgrund</h3>
                   <p className="text-gray-700 leading-relaxed mt-2">
-                    Det har hänt mycket på de 40 år som jag varit aktiv inom ekonomiområdet. Från att
-                    skriva fakturor på skrivmaskin till dagens digitaliserade system.
+                    Det har hänt mycket på de 40 år som jag varit aktiv inom ekonomiområdet. Från
+                    att skriva fakturor på skrivmaskin till dagens digitaliserade system.
                   </p>
 
                   <p className="text-gray-700 leading-relaxed mt-4">
@@ -285,7 +137,10 @@ function App() {
         </section>
       </main>
 
-      <footer id="contact" className="bg-blue-400/50 px-6 py-12 text-gray-700 border-t border-black/10">
+      <footer
+        id="contact"
+        className="bg-blue-400/50 px-6 py-12 text-gray-700 border-t border-black/10"
+      >
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">Kontakt</h3>
 
@@ -293,7 +148,8 @@ function App() {
             <li className="font-medium text-gray-800">AP Ekonomi & Redovisning AB</li>
 
             <li>
-              <span className="font-semibold">Postadress:</span> Fjärestadsvägen 309, 253 42 Vallåkra
+              <span className="font-semibold">Postadress:</span> Fjärestadsvägen 309, 253 42
+              Vallåkra
             </li>
 
             <li>
