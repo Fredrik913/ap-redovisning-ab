@@ -14,7 +14,7 @@ function About() {
             <img
               src={about.image.src}
               alt={about.image.alt}
-              className="w-64 h-64 object-cover rounded-full shadow-lg border border-blue-400/30"
+              className="w-64 h-64 object-cover rounded-full shadow-lg border border-brand-600/30"
             />
           </div>
 

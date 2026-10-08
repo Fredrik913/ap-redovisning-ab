@@ -17,7 +17,7 @@ function References() {
             >
               <div
                 aria-hidden="true"
-                className="shrink-0 w-12 h-12 rounded-full bg-stone-800 text-amber-50 font-semibold flex items-center justify-center"
+                className="shrink-0 w-12 h-12 rounded-full bg-brand-100 text-brand-700 font-semibold flex items-center justify-center"
               >
                 {ref.initials}
               </div>
@@ -32,7 +32,7 @@ function References() {
                 >
                   <svg
                     aria-hidden="true"
-                    className="w-4 h-4 text-amber-500"
+                    className="w-4 h-4 text-gray-900"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
