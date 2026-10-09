@@ -13,6 +13,12 @@
   --color-brand-950: var(--color-blue-950);
 }
 
+/* Textstorlekar som krymper på smala skärmar. Max 16px resp. 14px */
+@theme {
+  --text-fluid-base: clamp(0.8125rem, 4.6vw - 0.2rem, 1rem);
+  --text-fluid-sm: clamp(0.75rem, 4vw - 0.175rem, 0.875rem);
+}
+
 /* Tailwind v4 har currentColor som standardfärg på border, v3 (CDN) hade gray-200 */
 @layer base {
   *,

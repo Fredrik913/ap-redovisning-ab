@@ -3,9 +3,14 @@ import CopyButton from "./CopyButton";
 
 function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-slate-300 px-6 pt-16 pb-8 scroll-mt-[60px]">
+    <footer
+      id="contact"
+      className="bg-gray-900 text-fluid-base text-slate-300 px-6 pt-16 pb-8 scroll-mt-[60px]"
+    >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl font-semibold text-white">{contact.company}</h2>
+        <h2 className="text-[length:clamp(1rem,6.2vw_-_0.2rem,1.5rem)] font-semibold text-white">
+          {contact.company}
+        </h2>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div className="md:col-span-2 lg:col-span-1">
@@ -66,7 +71,7 @@ function Footer() {
             </h3>
             <dl className="mt-4 space-y-3">
               <div>
-                <dt className="text-sm text-slate-400">Postadress</dt>
+                <dt className="text-fluid-sm text-slate-400">Postadress</dt>
                 <dd>{contact.postalAddress}</dd>
               </div>
             </dl>
@@ -78,14 +83,14 @@ function Footer() {
             </h3>
             <dl className="mt-4 space-y-3">
               <div>
-                <dt className="text-sm text-slate-400">Organisationsnummer</dt>
+                <dt className="text-fluid-sm text-slate-400">Organisationsnummer</dt>
                 <dd className="flex items-center gap-1">
                   {contact.orgNumber}
                   <CopyButton text={contact.orgNumber} label="Kopiera organisationsnummer" />
                 </dd>
               </div>
               <div>
-                <dt className="text-sm text-slate-400">Bankgiro</dt>
+                <dt className="text-fluid-sm text-slate-400">Bankgiro</dt>
                 <dd className="flex items-center gap-1">
                   {contact.bankgiro}
                   <CopyButton text={contact.bankgiro} label="Kopiera bankgiro" />
@@ -95,7 +100,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 text-sm text-slate-400">
+        <div className="mt-12 pt-6 border-t border-white/10 text-fluid-sm text-slate-400">
           © {new Date().getFullYear()} {contact.company}. {contact.rightsReserved}
         </div>
       </div>

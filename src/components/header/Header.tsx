@@ -34,7 +34,7 @@ function Header() {
     <header id="top" className="sticky top-0 z-50 bg-gray-50 border-b border-gray-300">
       <nav className="bg-gray-50 border-b border-gray-300 sticky top-0 z-50">
         <div className="px-6 md:px-10 py-4 flex items-center justify-between">
-          <div className="text-xl text-gray-800 whitespace-nowrap">
+          <div className="text-[length:clamp(0.9375rem,4.6vw,1.25rem)] leading-7 text-gray-800 whitespace-nowrap">
             <a href="#" onClick={goHome}>
               AP Ekonomi & Redovisning AB
             </a>
