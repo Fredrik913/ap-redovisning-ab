@@ -1,7 +1,12 @@
+import { useEffect, useState } from "react";
 import { contact } from "../../content/contact";
 import CopyButton from "./CopyButton";
 
 function Footer() {
+  // Startar med byggåret så att förrenderad HTML och React matchar, byts till aktuellt år efter laddning
+  const [year, setYear] = useState(__BUILD_YEAR__);
+  useEffect(() => setYear(new Date().getFullYear()), []);
+
   return (
     <footer
       id="contact"
@@ -101,7 +106,7 @@ function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 text-fluid-sm text-slate-400">
-          © {new Date().getFullYear()} {contact.company}. {contact.rightsReserved}
+          © {year} {contact.company}. {contact.rightsReserved}
         </div>
       </div>
     </footer>

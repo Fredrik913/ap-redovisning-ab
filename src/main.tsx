@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { ViteReactSSG } from "vite-react-ssg/single-page";
 import "./index.css";
 import App from "./App";
 
-createRoot(document.getElementById("root")!).render(
+// Förrenderar sidan till färdig HTML vid build, och tar över i webbläsaren efteråt
+export const createRoot = ViteReactSSG(
   <StrictMode>
     <App />
   </StrictMode>,

@@ -11,5 +11,5 @@ export const contact = {
   bankgiro: "823-3439",
   phone: { tel: "0760344371", label: "0760-34 43 71" },
   email: "annika.persson@ekonomiochredovisning.se",
-  rightsReserved: "Alla rättigheter reserverade.",
+  rightsReserved: "Alla rättigheter förbehållna.",
 };
