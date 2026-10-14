@@ -16,16 +16,16 @@ function Hero() {
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-200 text-balance">{hero.subheading}</p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <a
             href={`tel:${contact.phone.tel}`}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-brand-800 bg-brand-800 text-white font-semibold shadow-md hover:bg-brand-700 hover:border-brand-700 transition-colors"
+            className="inline-flex items-center justify-center w-full max-w-72 sm:w-auto px-6 py-3 rounded-lg border-2 border-brand-800 bg-brand-800 text-white font-semibold shadow-md hover:bg-brand-700 hover:border-brand-700 transition-colors"
           >
             {hero.callLabel} {contact.phone.label}
           </a>
           <a
             href={`mailto:${contact.email}`}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-gray-900 bg-gray-900 text-white font-semibold shadow-md hover:bg-gray-800 hover:border-gray-800 transition-colors"
+            className="inline-flex items-center justify-center w-full max-w-72 sm:w-auto px-6 py-3 rounded-lg border-2 border-gray-900 bg-gray-900 text-white font-semibold shadow-md hover:bg-gray-800 hover:border-gray-800 transition-colors"
           >
             {hero.emailLabel}
           </a>

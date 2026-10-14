@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <header id="top" className="sticky top-0 z-50 bg-gray-50 border-b border-gray-300">
-      <nav className="bg-gray-50 border-b border-gray-300 sticky top-0 z-50">
+      <nav className="relative bg-gray-50 border-b border-gray-300 sticky top-0 z-50">
         <div className="px-6 md:px-10 py-4 flex items-center justify-between">
           <div className="text-[length:clamp(0.9375rem,4.6vw,1.25rem)] leading-7 text-gray-800 whitespace-nowrap">
             <a href="#" onClick={goHome}>
@@ -53,6 +53,7 @@ function Header() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => goToSection(e, link.href)}
                 className="hover:underline decoration-2 underline-offset-8 text-black"
               >
                 {link.label}
@@ -73,24 +74,29 @@ function Header() {
           </button>
         </div>
 
-        {/* Mobilmeny */}
+        {/* Mobilmeny: ligger ovanpå sidan och fälls ut genom att animera radhöjden från 0 till full höjd */}
         <div
           ref={menuRef}
-          className={`lg:hidden ${menuOpen ? "" : "hidden"} border-t border-gray-200 px-6 py-2 bg-white/95 text-right backdrop-blur-xs`}
+          inert={!menuOpen}
+          className={`lg:hidden absolute inset-x-0 top-full grid transition-[grid-template-rows,opacity] duration-200 ease-out ${menuOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
         >
-          <a href="#" onClick={goHome} className="block py-2.5 hover:underline text-black">
-            Hem
-          </a>
-          {menuLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => goToSection(e, link.href)}
-              className="block py-2.5 hover:underline text-black"
-            >
-              {link.label}
-            </a>
-          ))}
+          <div className="overflow-hidden">
+            <div className="border-t border-gray-200 border-b border-b-gray-300 px-6 py-2 bg-white text-right shadow-md">
+              <a href="#" onClick={goHome} className="block py-2.5 hover:underline text-black">
+                Hem
+              </a>
+              {menuLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => goToSection(e, link.href)}
+                  className="block py-2.5 hover:underline text-black"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </nav>
     </header>
