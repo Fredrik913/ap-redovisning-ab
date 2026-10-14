@@ -5,9 +5,21 @@ function Hero() {
   return (
     <div className="relative flex justify-center items-center -mt-[73px] pt-[97px] pb-8 border-b border-black/20 h-[80vh]">
       <picture className="absolute inset-0 w-full h-full">
-        <source srcSet={hero.image.mobile} media="(max-width: 640px)" type="image/jpeg" />
-        <source srcSet={hero.image.desktop} media="(min-width: 641px)" type="image/jpeg" />
-        <img src={hero.image.desktop} alt={hero.image.alt} className="w-full h-full object-cover" />
+        {/* WebP först, JPG som reserv för äldre webbläsare */}
+        <source srcSet={hero.image.mobileWebp} media="(max-width: 640px)" type="image/webp" />
+        <source
+          srcSet={hero.image.desktopWebp}
+          sizes="100vw"
+          media="(min-width: 641px)"
+          type="image/webp"
+        />
+        <source srcSet={hero.image.mobileJpg} media="(max-width: 640px)" type="image/jpeg" />
+        <img
+          src={hero.image.desktopJpg}
+          alt={hero.image.alt}
+          fetchPriority="high"
+          className="w-full h-full object-cover"
+        />
       </picture>
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 text-center px-6 max-w-3xl">

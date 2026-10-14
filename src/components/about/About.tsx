@@ -11,11 +11,18 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Bilden */}
           <div className="flex justify-center">
-            <img
-              src={about.image.src}
-              alt={about.image.alt}
-              className="w-64 h-64 object-cover rounded-full shadow-lg border border-brand-600/30"
-            />
+            <picture>
+              <source srcSet={about.image.webp} type="image/webp" />
+              <img
+                src={about.image.jpg}
+                alt={about.image.alt}
+                width={800}
+                height={800}
+                loading="lazy"
+                decoding="async"
+                className="w-64 h-64 object-cover rounded-full shadow-lg border border-brand-600/30"
+              />
+            </picture>
           </div>
 
           {/* Textblock */}

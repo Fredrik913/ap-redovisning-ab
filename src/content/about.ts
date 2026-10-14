@@ -11,14 +11,15 @@ export type ExperienceContent = {
 
 export const about: {
   heading: string;
-  image: { src: string; alt: string };
+  image: { webp: string; jpg: string; alt: string };
   intro: TextBlockContent;
   experience: ExperienceContent;
   background: TextBlockContent;
 } = {
   heading: "Vilka är vi",
   image: {
-    src: "/pictures/profile-portrait.jpg",
+    webp: "/pictures/profile-portrait.webp",
+    jpg: "/pictures/profile-portrait.jpg",
     alt: "Ägare Annika Persson",
   },
   intro: {
